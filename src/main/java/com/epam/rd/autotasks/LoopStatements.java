@@ -2,11 +2,12 @@ package com.epam.rd.autotasks;
 class LoopStatements {
     public static int task1(int n) {
       int sum = 0;
-      do {
-          if (n%2!=0) {
-              sum = sum + n%10;}
-          n = n/10;
-      } while (n>0);
-      return sum;
+      int number = 0;
+      String digit = n + "";
+      for (int i=0; i<digit.length(); i++) {
+          number = digit.charAt(i)-'0';
+          if (number%2!=0) {
+              sum = sum + number;}
+      }   return sum;
     }
 }
